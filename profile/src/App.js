@@ -7,6 +7,7 @@ export default function SimpleStoreDispatch() {
   return (
     <Provider store={store}>
       <Profile />
+      
     </Provider>
   )
 }
