@@ -40,7 +40,7 @@ export default () => {
         <span>{profileData.following} following</span> <span>&middot; </span>
         
         <span>&#9734;{profileData.starred} 0</span>
-        <div id="located">{profileData.location}</div>
+        <div id="located"><i className="fa fa-map-marker" aria-hidden="true"></i>{profileData.location}</div>
         <span id="emailadd">{profileData.email}</span>
       </div>
 
@@ -81,7 +81,10 @@ export default () => {
             </p>
 
             <p id="secondLine">
-              {reposData.language} Updated {moment(reposData.updated_at).startOf('day').fromNow()}
+              {reposData.language} 
+              
+              <img className="fork" src="https://user-images.githubusercontent.com/17777237/54873012-40fa5b00-4dd6-11e9-98e0-cc436426c720.png"></img>
+                Updated {moment(reposData.updated_at).startOf('day').fromNow()}
             </p>
           </div>
         ))}

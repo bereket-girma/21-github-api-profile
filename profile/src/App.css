@@ -8,7 +8,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #E2E4E8;
+  border-top: 1px solid #e2e4e8;
   margin: 1em 0;
   padding: 0;
 }
@@ -24,7 +24,7 @@ hr {
   margin: auto;
 }
 
-img {
+img.profile {
   border-radius: 50%;
   width: 260px;
   height: 260px;
@@ -78,10 +78,11 @@ img {
 
 .subNav {
   display: flex;
-    margin: 27px 0;
-    margin-left: 231px;
-    padding-left: 230px;
-    margin-bottom: -13px;
+  margin: 27px 0;
+  margin-left: 231px;
+  padding-left: 230px;
+  margin-bottom: -13px;
+  /* border-bottom: 2px solid #ddd; */
 }
 
 .subNav p {
@@ -169,7 +170,7 @@ margin-right: 20px;
 
 .singleRepo {
   margin: 12px 0;
-    padding: 5px 0;
+  padding: 5px 0;
 }
 
 #firstLine {
@@ -187,61 +188,66 @@ margin-right: 20px;
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
- #star {
+#star {
   margin-top: -43px;
-    margin-left: 778px;
-    height: 35px;
+  margin-left: 778px;
+  height: 35px;
 }
-
-
 
 .filter {
   margin-bottom: -17px;
-    margin-top: 1px;
+  margin-top: 1px;
 }
 #secondLine {
   /* color:#92969C; */
-  color: #586069!important;
+  color: #586069 !important;
   font-size: 12px;
 }
 
 .underlineNav {
   margin: 16px 0;
-    margin-left: -6px;
-    /* padding-left: 50px; */
-    text-decoration: none;
-    color: #1b1f23;
-    margin-right: 67px;
+  margin-left: -6px;
+  /* padding-left: 50px; */
+  text-decoration: none;
+  color: #1b1f23;
+  margin-right: 67px;
 }
 
-.underlineNav:hover{
+.underlineNav:hover {
   border-bottom: 2px solid #ddd;
   margin-bottom: -3px;
 }
 
-.repositories{
-  
+.repositories {
   border-bottom: 2px solid #f9826c;
   font-weight: 600;
   margin-bottom: -3px;
-   
 }
 
 .repoNum {
   margin-bottom: -3px;
-    position: relative;
-    left: -58px;
-    /* right: 70px; */
-    top: 18px;
-    font-size: 12px;
-    background: #ddd;
-    padding: 3px -6px;
-    height: 21px;
-    padding: 3px 4px;
-    border-radius: 10px;
+  position: relative;
+  left: -58px;
+  /* right: 70px; */
+  top: 18px;
+  font-size: 12px;
+  background: #ddd;
+  padding: 3px -6px;
+  height: 21px;
+  padding: 3px 4px;
+  border-radius: 10px;
 }
-
 
 .repositories:hover {
   border-bottom: 2px solid #f9826c;
+}
+
+.fork {
+  
+  width: 8px;
+    margin: -3px 17px;
+}
+
+.fa-map-marker{
+  margin-right: 3px;
 }
