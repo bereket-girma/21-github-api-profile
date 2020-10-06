@@ -5,6 +5,7 @@ import { getRepos } from "../store/index";
 import "../App.css";
 // import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { MdStar } from "react-icons/md";
+import moment from 'moment';
 
 export default () => {
   const dispatch = useDispatch();
@@ -17,10 +18,12 @@ export default () => {
   return (
     <div>
       <div className="subNav">
-            <p>Overview</p>
-            <p>Repositories</p>
-            <p>Project</p>
-            <p>Packages</p>
+      <a className="underlineNav" href="#">Overview</a>
+  <a className="underlineNav repositories" href="#">Repositories</a><span className="repoNum">{repos.length}</span>
+      <a className="underlineNav" href="#">Project</a>
+      <a className="underlineNav" href="#">Packages</a>
+
+           
             
         </div>
         <hr></hr>
@@ -36,7 +39,7 @@ export default () => {
         <span>{profileData.followers} followers</span> <span>&middot; </span>
         <span>{profileData.following} following</span> <span>&middot; </span>
         
-        <span><MdStar />{profileData.starred}</span>
+        <span>&#9734;{profileData.starred} 0</span>
         <div id="located">{profileData.location}</div>
         <span id="emailadd">{profileData.email}</span>
       </div>
@@ -74,11 +77,11 @@ export default () => {
               <a className="codeRepository" href={reposData.html_url}>
                 {reposData.name}
               </a>
-              <button id="star">Star</button>
+              <button id="star">&#9734; Star</button>
             </p>
 
             <p id="secondLine">
-              {reposData.language} Updated {reposData.updated_at}
+              {reposData.language} Updated {moment(reposData.updated_at).startOf('day').fromNow()}
             </p>
           </div>
         ))}
